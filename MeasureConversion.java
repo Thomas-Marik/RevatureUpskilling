@@ -20,7 +20,7 @@ public class MeasureConversion {
         cmConvert = convertCentimeters(cm);
         System.out.println(cm + " centimeters converts to "+cmConvert+" inches");
 
-1
+
     }
 
     public static double convertCentimeters(int x) {

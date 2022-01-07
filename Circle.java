@@ -1,4 +1,4 @@
-package RevatureUpskilling;
+
 
 import java.util.Scanner;
 import java.lang.Math.*;

@@ -1,46 +1,51 @@
-package ListsDemo.beans;
+package ListsDemo;
 
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.TreeSet;
 
-public class TreeSetDemo {
+public class ArrayListDemo {
     public static void main(String[] args) {
-        TreeSet<Integer> intSet = new TreeSet<>();
+        ArrayList<Integer> intList = new ArrayList<>();
 
+        //Storing elements into an ArrayList
+
+        // 1. Instantiate and add
         Integer myInt = new Integer(10);
-        intSet.add(myInt);
+        intList.add(myInt);
 
         // 2. Instantiate and add
-        intSet.add(new Integer(5));
+        intList.add(new Integer(5));
 
         // 3. Instantiate with auto-boxing and add
         Integer anotherInt = 7;
-        intSet.add(anotherInt);
+        intList.add(anotherInt);
 
         // 4. Autboxing + add
-        intSet.add(9);
-        intSet.add(1);
-        intSet.add(10);
-        intSet.add(15);
+        intList.add(9);
+        intList.add(1);
+        intList.add(10);
+        intList.add(15);
 
         //Retrieve elements of an ArrayList
 
         //1. Generic - application for all collection - Just printing not accesssing each of the elements
         System.out.println("Using toString()");
-        System.out.println(intSet.toString()+"\n");
+        System.out.println(intList.toString()+"\n");
 
         //2. Positional Access - Only Applicable for List implementations
-//        for (int i = 0; i < intSet.size(); i++){
-//            System.out.println("Element at the position "+i+ " is "+intSet.get(i));
-//        }
+        for (int i = 0; i < intList.size(); i++){
+            System.out.println("Element at the position "+i+ " is "+intList.get(i));
+        }
 
         //3. Using Iterator - applicable for all Collection implementations
         System.out.println("Using Iterator");
-        Iterator<Integer> intIterator = intSet.iterator();
+        Iterator<Integer> intIterator = intList.iterator();
         while (intIterator.hasNext()){
             int element = intIterator.next(); // Auto-boxing;
             System.out.println(element);
         }
+
+
     }
 }

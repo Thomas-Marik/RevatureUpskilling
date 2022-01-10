@@ -1,13 +1,12 @@
-package ListsDemo.beans;
+package ListsDemo;
 
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 
-public class HashSetDemo {
+public class TreeSetDemo {
     public static void main(String[] args) {
-        HashSet<Integer> intSet = new HashSet<>();
+        TreeSet<Integer> intSet = new TreeSet<>();
 
         Integer myInt = new Integer(10);
         intSet.add(myInt);

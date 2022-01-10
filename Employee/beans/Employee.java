@@ -28,5 +28,8 @@ public class Employee {
     public String toString(){
         return ("This employee's name is "+name+" and the id is "+id);
     }
+    public char[] toCSV() {
+        return null;
+    }
 
 }

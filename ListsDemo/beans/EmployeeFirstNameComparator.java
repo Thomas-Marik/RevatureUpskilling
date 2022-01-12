@@ -1,4 +1,5 @@
-package ListsDemo.beans;
+package com.revature.beans;
+
 import java.util.Comparator;
 
 public class EmployeeFirstNameComparator implements Comparator<Employee> {

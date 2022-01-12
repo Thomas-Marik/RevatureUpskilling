@@ -1,24 +1,20 @@
-package ListsDemo.beans;
-
+package com.revature.beans;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
-public class Employee implements Comparable<Employee>{
+@NoArgsConstructor
+public class Employee implements Comparable<Employee> {
     int id;
     String firstName;
     String lastName;
     String email;
-
     public String toCSV(){
-        return id +", "+firstName+", "+lastName+", "+email;
+        return id+", "+firstName+", "+lastName+", "+email;
     }
-
     public static Employee parseEmployee(String csvEmployee){
         String[] values = csvEmployee.split(",");
         int id = Integer.parseInt(values[0].trim());
@@ -30,7 +26,7 @@ public class Employee implements Comparable<Employee>{
     }
 
     @Override
-    public int compareTo(Employee otherEmployee) {
-        return this.id - otherEmployee.id;
+    public int compareTo(Employee other) {
+        return this.id - other.id ;
     }
 }

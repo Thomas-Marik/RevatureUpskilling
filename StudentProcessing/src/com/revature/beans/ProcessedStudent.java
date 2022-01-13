@@ -15,11 +15,9 @@ public class ProcessedStudent {
     int sub3;
     int total;
     double average;
-
     public String toCSV(){
         return id+", "+name+", "+sub1+", "+sub2+", "+sub3+", "+total+", "+average;
     }
-
     public static ProcessedStudent parseProcessedStudent(String csv){
         String[] values = csv.split(",");
         int id = Integer.parseInt(values[0].trim());
@@ -29,7 +27,6 @@ public class ProcessedStudent {
         int sub3 = Integer.parseInt(values[4].trim());
         int total = Integer.parseInt(values[5].trim());
         double average = Double.parseDouble(values[6].trim());
-        ProcessedStudent student = new ProcessedStudent(id, name, sub1, sub2, sub3, total, average);
-        return student;
+        return new ProcessedStudent(id, name, sub1, sub2, sub3, total, average);
     }
 }
